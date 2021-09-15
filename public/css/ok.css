@@ -1,0 +1,67 @@
+
+html, body { height: 100%; margin: 0; padding: 0; width: 100%; }
+
+/* sets the "root" font size to 10px so we can use the "rem" unit */
+html { font: 10px/1.75 'Mairy', sans-serif !important; }
+
+/* sets the font-size for mobile (12px) */
+body { font-size: 1.4rem; }
+
+/* sets the font-size for desktop (16px) */
+@media screen and (min-width: 568px){
+	body { font-size: 2.6rem !important; }
+}
+.read-more-btn{
+	padding-bottom:20px;
+}
+
+body {  border-image: url(assets/images/footer-bg-solid.png) 10 0 0 repeat-y; background: url('assets/images/beige-bg.jpg') #f8f4ec; color: #5a5a5a; padding-top: 20px; }
+
+*:focus{ outline: none; }
+
+/* heading font family */
+h1, h2 { font-family: 'Mairy Extrabold' !important; line-height: 1.25; }
+h3, h4, h5, h6 { font-family: 'Mairy Bold' !important; text-transform: uppercase; letter-spacing: 0.3rem; font-weight: normal; }
+
+h1 { font-size: 5rem; }    /* 50px */
+h2 { font-size: 4rem; }    /* 40px */
+h3 { font-size: 2rem; }    /* 20px */
+h4 { font-size: 1.8rem; }  /* 18px */
+h5 { font-size: 1.6rem; }  /* 16px */
+h6 { font-size: 1.4rem; }  /* 14px */
+.blog-text{
+	display: flex;
+}
+@media screen and (max-width: 568px){
+	article h2 { font-size: 3rem; }
+}
+
+h1 { color: #a69f9b; margin: 0 0 40px 0;}
+h1.title { font-size: 3rem; }
+.page h2 { font-size: 3rem; color: #a69f9b; }
+
+h2.title { font-family: 'Mairy Bold' !important; font-size: 2rem; text-transform: uppercase; letter-spacing: 0.3rem; font-weight: normal;  background: #edece8; padding: 20px 10px 20px 0; position:relative; color: #a69f9b; margin: 0 0 40px 0; }
+h2.title:before { background: #edece8; content: " "; display:block; height: 100%; position: absolute; right: 100%; top: 0; width: 9999%; }
+
+
+p { line-height: 2; margin: 0 0 30px 0; }
+p.btn a { display: block; border: 2px solid #b85b5a; font-family: 'Mairy Bold' !important; letter-spacing: 0.2rem; text-transform: uppercase; padding: 20px; text-align: center; line-height: 1.2; clear: both; }
+p.btn a span { /*display: block; font-family: 'Playfair Display', serif; font-style: italic; letter-spacing: 0; text-transform: none; float: right; position: absolute; top: 15px; right: 20px;*/  display: none; }
+p.buy a { display: block; background: #b85b5a; font-family: 'Mairy Bold' !important; letter-spacing: 0.2rem; text-transform: uppercase; padding: 20px; text-align: center; line-height: 1.2; clear: both; color: #f8f4ec;}
+@media screen and (max-width: 568px){
+	p.btn a, p.buy a { font-size: 1.4rem; }
+}
+
+
+a { color: #b85b5a; transition: all 0.2s ease-in-out; text-decoration: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+a:hover { color: #9c3433; }
+
+img{ height: auto; max-width: 100%; }
+.updates-text{
+    cursor: pointer;
+    text-decoration: underline !important;
+}
