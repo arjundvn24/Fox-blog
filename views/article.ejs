@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <html class="" lang="en-US">
+      <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+          <link rel="stylesheet" href="/css/ok.css">
+  
+      <link rel="stylesheet" id="main-css" href="https://blog.spoongraphics.co.uk/wp-content/themes/SpoonGraphics_V7.2/style.css?ver=5.8.1"  media="all">
+      
+      <div class="stage">
+      
+          <div class="contain">
+      
+              <header class="main-header" style="background-color: #F8F3ED;">
+                  <div class="grid">
+                      <div class="grid__item one-whole">
+                          <div class="grid">
+                              <div class="grid__item one-half">
+      
+                                  <nav class="nav nav--social">
+                                      <ul>
+                                          <li class="twitter"><a href="#">Twitter</a></li>
+                                          <li class="facebook"><a href="#s">Facebook</a></li>
+                                          <li class="youtube"><a href="#">Youtube</a></li>
+                                          <li class="pinterest"><a href="#">Pinterest</a></li>
+                                      </ul>
+                                  </nav>
+      
+                              </div>
+      
+                              <div class="grid__item one-half">
+      
+                                  <nav class="nav nav--utility">
+                                      <ul>
+  
+                                                                          <li class="rss-feed"></li>
+                                          <li class="search"></li>
+                                      </ul>
+                                  </nav>
+      
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="grid__item one-whole">
+                              
+                          <div class="brand">
+                              <a href="/"><img class="image" src="/images/Sexy-Fox-Logo.png" alt=""></a>
+                          </div>
+                      </div>
+
+                  </div>
+              </header>
+    <main>
+      <div class="article">
+        <% if (article.category === 'all') { %>
+          <h1><%= article.summary %></h1>
+          <p><%= article.description %></p>
+        <% } %>
+        <% if (article.category === 'limited') { %>
+          <i>MEMBERS ONLY</i>
+          <h1><%= article.summary %></h1>
+          <% if (locals.isLoggedIn) { %>
+            <p><%= article.description %></p>
+          <% } else { %>
+            <div class="article-login">
+              <p>Let's log in now!</p>
+              <p>Please log in to read<br>the rest of the article.</p>
+              <img src="/images/login.svg">
+              <a class="btn" href="/login">Log in</a>
+            </div>
+          <% } %>
+        <% } %>
+      </div>
+    </main>
+    <footer style="background-color: #F8F3ED;">
+      <a class="btn sub" href="/ok">Back to articles</a>
+    </footer>
+  </body>
+</html>

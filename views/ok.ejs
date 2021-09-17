@@ -1,0 +1,146 @@
+<html class="" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="/css/ok.css">
+
+    <link rel="stylesheet" id="main-css" href="https://blog.spoongraphics.co.uk/wp-content/themes/SpoonGraphics_V7.2/style.css?ver=5.8.1"  media="all">
+    
+    <div class="stage">
+    
+        <div class="contain">
+    
+            <header class="main-header">
+                <div class="grid">
+                    <div class="grid__item one-whole">
+                        <div class="grid">
+                            <div class="grid__item one-half">
+    
+                                <nav class="nav nav--social">
+                                    <ul>
+                                        <li class="twitter"><a href="#">Twitter</a></li>
+                                        <li class="facebook"><a href="#s">Facebook</a></li>
+                                        <li class="youtube"><a href="#">Youtube</a></li>
+                                        <li class="pinterest"><a href="#">Pinterest</a></li>
+                                    </ul>
+                                </nav>
+    
+                            </div>
+    
+                            <div class="grid__item one-half">
+    
+                                <nav class="nav nav--utility">
+                                    <ul>
+
+                                                                        <li class="rss-feed"></li>
+                                        <li class="search"></li>
+                                    </ul>
+                                </nav>
+    
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid__item one-whole">
+                            
+                        <div class="brand">
+                            <a href="/"><img class="image" src="/images/Sexy-Fox-Logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    
+                    <div class="grid__item one-whole">
+                        <nav class="nav nav--main cf">
+                            <ul>
+                                
+                                <li><a href="/ok">Articles</a></li>
+                                <% if (locals.isLoggedIn) { %>
+                                  <li><a href="/logout">Log out</a></li>
+                                <% } else { %>
+                                  <li><a href="/signup">Sign up</a></li>
+                                  <li><a href="/login">Log in</a></li>
+                                <% } %>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                </div>
+            </header>
+    
+        </div>	<div class="contain">
+            <div class="grid">
+                <div class="grid__item one-whole lap-and-up-two-thirds">
+                    <section id="main">
+    
+                        
+                        
+                                                
+                        <article class="post-11600 post type-post status-publish format-standard has-post-thumbnail hentry category-premium tag-access-all-areas tag-members tag-members-only tag-premium tag-resources">
+                            <div class="article-header bleed rgb-216-209-192">
+                                <a href="/login">
+    
+                                                                <img width="1000" height="666" src="/images/fox_logo.png" class="attachment-full size-full wp-post-image" alt="Read the article" loading="lazy">							
+                                </a>
+                            </div>
+                            <h2><a href="#" ><p class="updates-text"></p>Latest Updates </a></h2>
+
+    
+                            <% articles.forEach((article) => { %>
+    
+                                <% if (article.category === 'limited') {%>
+                                    <i>MEMBERS ONLY</i>
+                                  <% } %>                      
+                        <article class="post-1">
+                            <div class="post-1-img">
+                                
+                               
+    
+                                                 <a>               <img width="1000" height="745" src="<%=article.link%>" class="attachment-full size-full wp-post-image" alt="Read the article" loading="lazy">							
+                                </a>
+                            </div>
+                            <h2><a href="#"><p class="blog-text"><%= article.title%></a></p></h2>
+    
+                            <p class="blog-text"><%= article.summary %><br></p>
+                                <a class="read-more-btn" href="/article/<%=article.id%>">Read More</a>
+
+                        </article>  
+    <% })%>
+        <div class="footer-wrapper" style="padding-top: 30px;padding-right: 30px;padding-left: 30px;">
+            <footer class="main-footer contain cf">
+                <div class="footer-about">
+                    <h3>What is Fox News?</h3>
+    
+                    <p>
+                        Hi, I'm <a href="/about">XXXXXXXXr</a>. Thank you for taking the time to browse my content here on Fox News. I hope you've found some useful stuff so far? Let me show you around and explain what you can expect to find on my blog.
+                    </p>
+    
+                    <a href="/about" class="button learn-more">GITHUB LINK</a>
+                </div>
+    
+    
+                <div class="footer-links" st>
+                    <h3>Useful Links</h3>
+                    <ul class="cf">
+                        <li>
+                            <a href="/about">About</a>
+                            Find out more about Me
+                        </li>
+                        <li>
+                            <a href="/access-all-areas">Login</a>
+                            Gain access to 100s of premium blogs
+                        </li>
+                        <li><a href="/advertise">Signup</a>
+                   promote your work
+                        </li>
+                   
+                        <li>
+                            <a href="/contact">Contact</a>
+                            Start a conversation with me
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+  </body>
+  </html>
